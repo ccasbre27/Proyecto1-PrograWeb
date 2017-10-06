@@ -7,6 +7,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 20px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -58,6 +59,37 @@ textarea {
     min-width: 100%;
     height: 600px;
 }
+
+.custom-card{
+    padding:3px;
+    height: 3px;
+}
+
+.card{
+    height: 335px;
+}
+.img-card{
+    min-height:175px;
+}
+
+.label-default{
+    background-color: #1863e6;
+}
+
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    margin-left: 2px;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
 
 @media (min-width: 768px) {
     .carousel-caption p {

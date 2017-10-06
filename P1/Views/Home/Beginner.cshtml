@@ -1,0 +1,150 @@
+﻿
+@{
+    ViewBag.Title = "Beginner";
+}
+
+<div class="container body-content">
+
+
+
+    <div id="alertResultadoClase" class="alert alert-success fade in hidden">
+
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+
+        <label id="alertDescripcion"></label>
+
+    </div>
+
+
+
+    <div class="well">
+        <div class="row">
+            <form class="form-horizontal ">
+                <fieldset>
+                    <legend>Begineer</legend>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Costo</label>
+                        <div class="col-lg-3">
+                            <input id="txtPrecio" name="textinput" placeholder="$150" class="form-control input-md" pattern="[0-9.]+" value="150">
+                        </div>
+                        <div class="col-lg-7">
+                            <button class="btn btn-primary" onclick="CargarPrecioBeginner(false); return false;">Submit</button>
+                        </div>
+                    </div>
+
+
+                </fieldset>
+            </form>
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="well">
+
+        <form class="form-horizontal ">
+            <fieldset>
+                <legend>Descripción</legend>
+                <div class="form-group">
+                    <div class="col-lg-12">
+
+                        <span>Contamos con los siguientes horarios</span>
+                        <ul>
+                            <li>Lunes a Jueves: $<span id="costoLJ"></span></li>
+                            <li>Miércoles a Sábado: $<span id="costoMS"></span><span class="label label-default">15% descuento</span></li>
+                        </ul>
+                        <span>Nota: Cada día se brinda una clase de 3 horas</span>
+                    </div>
+                </div>
+
+
+            </fieldset>
+        </form>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-3 custom-card">
+
+            <div class="card well " >
+                <img class="card-img-top img-responsive img-card" src="~/Content/img/dia1-1.jpg" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Día #1</h4>
+                    <p class="card-text">La clase será fuera del agua se explicará cómo funciona la tabla.</p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="col-lg-3  custom-card">
+
+            <div class="card well" style="width: 100%;">
+                <img class="card-img-top img-responsive img-card" src="~/Content/img/dia1-2.jpg" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Día #2</h4>
+                    <p class="card-text">
+                        La clase será teórica y práctica, explicarán sobre corrientes y sobre el manejo de
+                        las mismas.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-lg-3  custom-card">
+
+            <div class="card well" style="width: 100%;">
+                <img class="card-img-top img-responsive img-card" src="~/Content/img/dia1-3.jpg" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Día #3</h4>
+                    <p class="card-text">La clase será 100 % en el agua con olas categoría 1</p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3  custom-card">
+
+            <div class="card well" style="width: 100%;">
+                <img class="card-img-top img-responsive img-card" src="~/Content/img/dia1-4.jpg" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Día #4</h4>
+                    <p class="card-text">La clase será 100% en el agua con olas categoría 2</p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section scripts{
+   
+<script>
+
+
+
+    $(document).ready(function () {
+
+        CargarPrecioBeginner(true);
+
+    });
+
+
+</script>
+    
+}
+
+

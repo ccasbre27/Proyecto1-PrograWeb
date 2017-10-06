@@ -13,16 +13,23 @@ namespace P1.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Beginner()
         {
-            ViewBag.Message = "Your application description page.";
+            
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Medium()
         {
-            ViewBag.Message = "Your contact page.";
+            
+
+            return View();
+        }
+
+        public ActionResult Advanced()
+        {
+
 
             return View();
         }
