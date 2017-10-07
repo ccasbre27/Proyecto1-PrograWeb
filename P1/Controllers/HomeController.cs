@@ -43,25 +43,25 @@ namespace P1.Controllers
                     {
                         Id = 1,
                         Descripcion = "La clase será fuera del agua se explicará cómo funciona la tabla.",
-                        ImagenURL = "dia1-1.jpg"
+                        ImagenURL = "tabla.jpg"
                     },
                      new Dia()
                     {
                         Id = 2,
                         Descripcion = "la clase será teórica y práctica, explicarán sobre corrientes y sobre el manejo de las mismas.",
-                        ImagenURL = "dia1-2.jpg"
+                        ImagenURL = "corrientes.jpg"
                     },
                       new Dia()
                     {
                         Id = 3,
                         Descripcion = "la clase será 100 % en el agua con olas categoría 1.",
-                        ImagenURL = "dia1-3.jpg"
+                        ImagenURL = "ola-1.jpg"
                     },
                        new Dia()
                     {
                         Id = 4,
                         Descripcion = "la clase será 100% en el agua con olas categoría 2.",
-                        ImagenURL = "dia1-4.jpg"
+                        ImagenURL = "ola-2.jpg"
                     }
                 }
             };
@@ -100,19 +100,19 @@ namespace P1.Controllers
                     {
                         Id = 1,
                         Descripcion = "La clase será fuera del agua se explicará cómo salir de corrientes tipo 3.",
-                        ImagenURL = "dia1-1.jpg"
+                        ImagenURL = "corrientes.jpg"
                     },
                      new Dia()
                     {
                         Id = 2,
                         Descripcion = "La clase será 100% práctica con olas categoría 3.",
-                        ImagenURL = "dia1-2.jpg"
+                        ImagenURL = "ola-3.jpg"
                     },
                       new Dia()
                     {
                         Id = 3,
                         Descripcion = "La clase será 100 % en el agua con olas categoría 4.",
-                        ImagenURL = "dia1-3.jpg"
+                        ImagenURL = "ola-4.jpg"
                     }
                 }
             };
@@ -152,19 +152,19 @@ namespace P1.Controllers
                     {
                         Id = 1,
                         Descripcion = "La clase será fuera del agua se explicará cómo salir de corrientes tipo 4.",
-                        ImagenURL = "dia1-1.jpg"
+                        ImagenURL = "corrientes.jpg"
                     },
                      new Dia()
                     {
                         Id = 2,
                         Descripcion = "La clase será 100% práctica con olas categoría 5.",
-                        ImagenURL = "dia1-2.jpg"
+                        ImagenURL = "ola-5.jpg"
                     },
                       new Dia()
                     {
                         Id = 3,
                         Descripcion = "La clase será 100 % en el agua con olas categoría 6.",
-                        ImagenURL = "dia1-3.jpg"
+                        ImagenURL = "ola-6.jpg"
                     }
                 }
             };
