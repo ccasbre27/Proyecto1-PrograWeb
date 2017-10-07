@@ -1,12 +1,25 @@
-﻿
+﻿@using P1.Models;
+
+@model ClaseSurf
+
 @{
-    ViewBag.Title = "Medium";
+    ViewBag.Title = Model.Nombre;
 }
 
-<div class="container body-content">
+@Html.Partial("_SurfPackage", Model)
 
-    <h2>Medium</h2>
+@section scripts{
 
-</div>
+    <script>
 
 
+    $(document).ready(function () {
+
+        CargarPrecios(true);
+
+    });
+
+
+    </script>
+
+}

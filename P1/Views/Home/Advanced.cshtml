@@ -1,11 +1,25 @@
-﻿
+﻿@using P1.Models;
+
+@model ClaseSurf
+
 @{
-    ViewBag.Title = "Advanced";
+    ViewBag.Title = Model.Nombre;
 }
 
-<div class="container body-content">
+@Html.Partial("_SurfPackage", Model)
 
-    <h2>Advanced</h2>
+@section scripts{
 
-</div>
+    <script>
 
+
+    $(document).ready(function () {
+
+        CargarPrecios(true);
+
+    });
+
+
+    </script>
+
+}

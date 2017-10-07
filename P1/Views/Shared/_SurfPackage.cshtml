@@ -1,0 +1,110 @@
+﻿@using P1.Models;
+
+@model ClaseSurf
+
+<div class="container body-content">
+
+    <div id="alertResultadoClase" class="alert alert-success fade in hidden">
+
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+
+        <label id="alertDescripcion"></label>
+
+    </div>
+
+    <div class="well">
+        <div class="row">
+            <form class="form-horizontal ">
+                <fieldset>
+                    <legend>@Model.Nombre</legend>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Costo</label>
+                        <div class="col-lg-3">
+                            @Html.TextBox("txtPrecio", Model.PrecioBase , new { id = "txtPrecio", pattern = "[0-9.]+" , @class="form-control input-md" })
+                           
+                            @Html.Hidden("txtDescuento", Model.Descuento)
+                        </div>
+                        <div class="col-lg-7">
+                            <button class="btn btn-primary" onclick="CargarPrecios(false); return false;">Submit</button>
+                        </div>
+                    </div>
+
+
+                </fieldset>
+            </form>
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="well">
+
+        <form class="form-horizontal ">
+            <fieldset>
+                <legend>Descripción</legend>
+                <div class="form-group">
+                    <div class="col-lg-12">
+
+                        <span>Contamos con los siguientes horarios</span>
+                        <ul>
+
+                            @{
+                                for (int i = 0; i < Model.ListaCronograma.Count; i++)
+                                {
+                                    <li>
+                                        @Model.ListaCronograma.ElementAt(i).Nombre: $<span id="@Model.ListaCronograma.ElementAt(i).Id"></span>
+
+                                    @if (Model.ListaCronograma.ElementAt(i).Descuento)
+                                    {
+                                        <span class="label label-default">@String.Format("{0}% descuento", Model.Descuento)</span>
+                                    }
+
+                                    </li>
+                                }
+
+                            }
+
+                        </ul>
+                        <span>Nota: Cada día se brinda una clase de @Model.DuracionClase horas</span>
+                    </div>
+                </div>
+
+
+            </fieldset>
+        </form>
+
+    </div>
+
+    <div class="row">
+
+        @{
+                string claseColumna = Model.ListaDias.Count == 4 ? "col-lg-3" : "col-lg-4";
+                foreach (var item in Model.ListaDias)
+                {
+                    <div class="@claseColumna custom-card">
+                        
+                        <div class="card well ">
+                            <img class="card-img-top img-responsive img-card" src="@Url.Content(String.Format("~/Content/img/{0}", item.ImagenURL))" alt ="Imagen Surf">
+                            <div class="card-block">
+                                <h4 class="card-title">Día #@item.Id</h4>
+                                <p class="card-text">@item.Descripcion.</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+            }
+        }
+
+    </div>
+
+</div>
+
+
+
+
+
+
